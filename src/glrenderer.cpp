@@ -1,7 +1,7 @@
 #include "glrenderer.h"
 
 #include <QCoreApplication>
-#include "CS1230Lib/shaderloader.h"
+#include "shaderloader.h"
 
 GLRenderer::GLRenderer(QWidget *parent)
     : QOpenGLWidget(parent)

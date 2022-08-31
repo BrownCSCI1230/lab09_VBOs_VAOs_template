@@ -62,14 +62,14 @@ private:
 
         // Print info log if shader fails to compile.
         GLint status;
-        glGetProgramiv(shaderID, GL_COMPILE_STATUS, &status);
+        glGetShaderiv(shaderID, GL_COMPILE_STATUS, &status);
 
         if (status == GL_FALSE) {
             GLint length;
-            glGetProgramiv(shaderID, GL_INFO_LOG_LENGTH, &length);
+            glGetShaderiv(shaderID, GL_INFO_LOG_LENGTH, &length);
 
             std::string log(length, '\0');
-            glGetProgramInfoLog(shaderID, length, nullptr, &log[0]);
+            glGetShaderInfoLog(shaderID, length, nullptr, &log[0]);
 
             glDeleteProgram(shaderID);
             throw std::runtime_error(log);
