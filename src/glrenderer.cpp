@@ -35,9 +35,9 @@ void GLRenderer::initializeGL()
 
     // TASK 6: Bind the VBO you created here
 
-    // TASK 7: Construct your std::vector of triangle data here | TASK 10: Add colors to your triangle here
+    // TASK 8: Construct your std::vector of triangle data here | TASK 10: Add colors to your triangle here
 
-    // TASK 8: Pass the triangle vector into your VBO here
+    // TASK 9: Pass the triangle vector into your VBO here
 
 
     // Vertex Array Objects //
