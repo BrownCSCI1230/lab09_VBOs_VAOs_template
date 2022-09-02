@@ -45,6 +45,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   Qt::Gui
   StaticGLEW
 )
+
 # GLEW: this provides support for Windows (including 64-bit)
 if (WIN32)
   add_compile_definitions(GLEW_STATIC)
@@ -53,12 +54,7 @@ if (WIN32)
     glu32
   )
 endif()
-# GLEW: this provides support for Linux
-if (UNIX AND NOT APPLE)
-  target_link_libraries(${PROJECT_NAME} PRIVATE
-    GLU
-  )
-endif()
+
 # Set this flag to silence warnings on Windows
 if (MSVC OR MSYS OR MINGW)
   set(CMAKE_CXX_FLAGS "-Wno-volatile")
