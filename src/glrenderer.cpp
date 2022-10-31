@@ -11,6 +11,7 @@ GLRenderer::GLRenderer(QWidget *parent)
 
 void GLRenderer::finish()
 {
+    makeCurrent();
     // Task 19: Clean up you VBO and VAO memory here
 
     glDeleteProgram(m_shader);
@@ -23,10 +24,11 @@ void GLRenderer::initializeGL()
     GLenum err = glewInit();
     if (GLEW_OK != err) fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
     fprintf(stdout, "Using GLEW %s\n", glewGetString(GLEW_VERSION));
+    glViewport(0, 0, size().width(), size().height());
 
     // Task 4: Set the clear color here
 
-    m_shader = ShaderLoader::createShaderProgram("Resources/Shaders/default.vert", "Resources/Shaders/default.frag"); //Shader setup (DO NOT EDIT)
+    m_shader = ShaderLoader::createShaderProgram("Resources/Shaders/default.vert", "Resources/Shaders/default.frag"); // Shader setup (DO NOT EDIT)
 
 
     // Vertex Buffer Objects //
