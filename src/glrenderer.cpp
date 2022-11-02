@@ -20,11 +20,13 @@ void GLRenderer::finish()
 
 void GLRenderer::initializeGL()
 {
+    // Initializes the GLEW library/provides access to OpenGL functions
     glewExperimental = GL_TRUE;
     GLenum err = glewInit();
     if (GLEW_OK != err) fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
     fprintf(stdout, "Using GLEW %s\n", glewGetString(GLEW_VERSION));
-    glViewport(0, 0, size().width(), size().height());
+
+    glViewport(0, 0, size().width(), size().height()); // Tells your computer the size of the screen it will draw to
 
     // Task 4: Set the clear color here
 
