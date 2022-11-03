@@ -30,7 +30,7 @@ void GLRenderer::initializeGL()
 
     // Task 4: Set the clear color here
 
-    m_shader = ShaderLoader::createShaderProgram("Resources/Shaders/default.vert", "Resources/Shaders/default.frag"); // Shader setup (DO NOT EDIT)
+    m_shader = ShaderLoader::createShaderProgram(":/Resources/Shaders/default.vert", ":/Resources/Shaders/default.frag"); // Shader setup (DO NOT EDIT)
 
 
     // Vertex Buffer Objects //
