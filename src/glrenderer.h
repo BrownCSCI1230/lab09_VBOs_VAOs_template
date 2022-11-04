@@ -1,6 +1,11 @@
 #pragma once
 
-#include "GL/glew.h"
+// Defined before including GLEW to suppress deprecation messages on macOS
+#ifdef __APPLE__
+#define GL_SILENCE_DEPRECATION
+#endif
+
+#include "GL/glew.h" // Must always be first include
 #include <QOpenGLWidget>
 #include "glm/glm.hpp"
 

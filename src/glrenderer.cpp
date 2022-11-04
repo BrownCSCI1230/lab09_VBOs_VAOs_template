@@ -1,4 +1,5 @@
 #include "glrenderer.h"
+#include "debug.h"
 
 #include <QCoreApplication>
 #include "shaderloader.h"
@@ -61,6 +62,7 @@ void GLRenderer::paintGL()
 {
     // Task 15: Clear the screen here
 
+    // Bind the shader
     glUseProgram(m_shader);
 
     // Task 16: Bind your VAO here
@@ -69,6 +71,7 @@ void GLRenderer::paintGL()
 
     // Task 18: Unbind your VAO here
 
+    // Unbind the shader
     glUseProgram(0);
 }
 
