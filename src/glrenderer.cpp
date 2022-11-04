@@ -12,7 +12,8 @@ GLRenderer::GLRenderer(QWidget *parent)
 void GLRenderer::finish()
 {
     makeCurrent();
-    // Task 19: Clean up you VBO and VAO memory here
+
+    // Task 19: Clean up your VBO and VAO memory here
 
     glDeleteProgram(m_shader);
     doneCurrent();
@@ -30,10 +31,10 @@ void GLRenderer::initializeGL()
 
     // Task 4: Set the clear color here
 
-    m_shader = ShaderLoader::createShaderProgram(":/Resources/Shaders/default.vert", ":/Resources/Shaders/default.frag"); // Shader setup (DO NOT EDIT)
+    // Shader setup (DO NOT EDIT)
+    m_shader = ShaderLoader::createShaderProgram(":/resources/shaders/default.vert", ":/resources/shaders/default.frag");
 
-
-    // Vertex Buffer Objects //
+    // ================== Vertex Buffer Objects
 
     // Task 5: Generate a VBO here and store it in m_vbo
 
@@ -43,8 +44,7 @@ void GLRenderer::initializeGL()
 
     // Task 9: Pass the triangle vector into your VBO here
 
-
-    // Vertex Array Objects //
+    // ================== Vertex Array Objects
 
     // Task 11: Generate a VAO here and store it in m_vao
 
@@ -52,8 +52,7 @@ void GLRenderer::initializeGL()
 
     // Task 13: Add position and color attributes to your VAO here
 
-
-    // Returning to Default State //
+    // ================== Returning to Default State
 
     // Task 14: Unbind your VBO and VAO here
 }
@@ -73,7 +72,4 @@ void GLRenderer::paintGL()
     glUseProgram(0);
 }
 
-void GLRenderer::resizeGL(int w, int h)
-{
-
-}
+void GLRenderer::resizeGL(int w, int h) {}

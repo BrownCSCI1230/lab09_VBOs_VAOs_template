@@ -4,12 +4,12 @@
 
 namespace Debug
 {
-    // TASK 2: Add file name and line number parameters
-    inline void glErrorCheck(){
+    // Task 2: Add file name and line number parameters
+    inline void glErrorCheck() {
         GLenum error = glGetError();
-        while(error != GL_NO_ERROR){
+        while (error != GL_NO_ERROR) {
             // Task 2: Edit this print statement to be more descriptive
-            std::cout<<error<<std::endl;
+            std::cout << error << std::endl;
             error = glGetError();
         }
     }

@@ -8,8 +8,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    QCoreApplication::setApplicationName("Lab 9: VBOs/VAOs");
-    QCoreApplication::setOrganizationName("QtProject");
+    QCoreApplication::setApplicationName("Lab 9: VBOs & VAOs");
+    QCoreApplication::setOrganizationName("CS 1230");
     QCoreApplication::setApplicationVersion(QT_VERSION_STR);
 
     QSurfaceFormat fmt;
