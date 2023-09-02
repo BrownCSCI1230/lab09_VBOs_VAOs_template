@@ -53,6 +53,19 @@ void GLRenderer::initializeGL()
 
     // Task 13: Add position and color attributes to your VAO here
 
+    // Task 13: Verify your position and color attributes with our verifyVAO function
+
+    // Copy over your attributes from glVertexAttribPointer() to verifyVAO
+    // So the following function becomes:
+    // glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4, reinterpret_cast<void*>(0));
+    // verifyVAO(triangleData, 0, 2, 4, reinterpret_cast<void*>(0));
+    // If the function prints the values you would expect for position and color then you're good!
+
+    //std::cout << "Position Values" << std::endl;
+    //verifyVAO();
+    //std::cout << "Color Values" << std::endl;
+    //verifyVAO();
+
     // ================== Returning to Default State
 
     // Task 14: Unbind your VBO and VAO here
