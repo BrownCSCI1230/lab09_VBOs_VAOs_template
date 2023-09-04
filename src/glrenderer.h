@@ -26,7 +26,15 @@ private:
     GLuint m_vbo;    // Stores id of VBO
     GLuint m_vao;    // Stores id of VAO
 
-    void verifyVAO(std::vector<GLfloat> triangleData, GLuint index, GLsizei size, GLsizei stride, const void* offset) {
+    /**
+     * @brief verifyVAO - prints in the terminal how OpenGL would interpret `triangleData` using the inputted VAO arguments
+     * @param triangleData - the vector containing the triangle data
+     * @param index - same as glVertexAttribPointer()
+     * @param size - same as glVertexAttribPointer()
+     * @param stride - same as glVertexAttribPointer()
+     * @param offset - same as glVertexAttribPointer()
+     */
+    void verifyVAO(std::vector<GLfloat> &triangleData, GLuint index, GLsizei size, GLsizei stride, const void* offset) {
 
         int newStride = int(stride / 4);
         int groupNum = 0;
