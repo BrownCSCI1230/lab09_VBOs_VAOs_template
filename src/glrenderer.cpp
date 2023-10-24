@@ -53,6 +53,8 @@ void GLRenderer::initializeGL()
 
     // Task 13: Add position and color attributes to your VAO here
 
+    // Task 13: Verify your position and color attributes with our verifyVAO function
+
     // ================== Returning to Default State
 
     // Task 14: Unbind your VBO and VAO here
